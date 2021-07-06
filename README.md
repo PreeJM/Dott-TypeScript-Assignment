@@ -5,7 +5,7 @@
 There is given a rectangular bitmap of size n x m. Each pixel of the bitmap is either white or
 black, but at least one is white. 
 
-The pixel in i-th line and j-th column is called the pixel (i,j). 
+The pixel in i-th line and j-th column is called the pixel(i,j). 
 
 The distance between two pixels p1=(i1,j1) and p2=(i2,j2) is defined as d(p1,p2)=|i1-i2|+|j1-j2|.
 
@@ -30,7 +30,7 @@ Get this code by cloning this repository or download it using:
 git clone https://github.com/PreeJM/Dott-TypeScript-Assignment
 ```
 
-Once the code has been downloaded, open the terminal in the project directory, and install all the dependencies using:
+Once the code has been downloaded, open a terminal in the project directory, and install all the dependencies using:
 
 ```
 npm install
