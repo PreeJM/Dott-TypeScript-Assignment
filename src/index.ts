@@ -32,7 +32,7 @@ rl.on('close', function () {
             const dimensions: Dimensions = getBitmapDimensions(eachCase[0])
             const pixelRows: string[] = eachCase.slice(1, dimensions.n+1)
             const finalDistanceArray: number[][] = getFinalDistanceArray(dimensions, pixelRows)
-            process.stdout.write(`\nDistance Array for Test Case ${testCaseIndex+1}:\n${finalDistanceArray.map(row => row.join(" ")).join("\n")}\n`)
+            process.stdout.write(`\nDistance Array for Bitmap/Testcase ${testCaseIndex+1}:\n${finalDistanceArray.map(row => row.join(" ")).join("\n")}\n`)
         })
         process.exit(0);
     }
