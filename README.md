@@ -63,7 +63,7 @@ If a pixel(i,j) is white, then at the j-th position in the line (i+1), 1 <= i <=
 
 Black pixels are represented by a value of '0'.
 
-Note: To run this program correctly, at the console prompt, please paste your input data block and then press 'Enter' followed by the lowercase letter 'q'.
+***Note: To run this program correctly, at the console prompt, please paste your input data block and then press 'Enter' followed by the lowercase letter 'q'.***
 
 #### Example Input
 ```
