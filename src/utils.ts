@@ -65,7 +65,8 @@ export const getTestCases = (input: string[]): string[][] => {
         if(eachTestCase.length){
             testCases.push(eachTestCase)
         }
-        currentIndex += endIndex
+        // currentIndex += endIndex
+        currentIndex = endIndex === -1 ? input.length : endIndex + 1
     }
     return testCases
 }

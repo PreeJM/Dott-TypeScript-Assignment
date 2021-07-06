@@ -4,10 +4,12 @@ import { validateDataSize, getFinalDistanceArray, getTestCases, getBitmapDimensi
 
 const input: string[] = [];
 
+
 const rl: Interface = createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
 
 rl.prompt();
 console.log("Please enter your input data. At the end, please press Enter followed by the letter 'q'.\n")
@@ -24,15 +26,20 @@ rl.on('close', function () {
     const numberOfBitmaps: number = parseInt(input[0])
     const testCases: string[][] = getTestCases(input)
 
-    validateDataSize(numberOfBitmaps, testCases.length)
+    if(validateDataSize(numberOfBitmaps, testCases.length)){
 
-    testCases.forEach((eachCase: string[], testCaseIndex: number) => {
-        const dimensions: Dimensions = getBitmapDimensions(eachCase[0])
-        const pixelRows: string[] = eachCase.slice(1, dimensions.n+1)
-        const finalDistanceArray: number[][] = getFinalDistanceArray(dimensions, pixelRows)
-        console.log(`Distance Array for Test Case ${testCaseIndex+1}:\n${finalDistanceArray.map(row => row.join(" ")).join("\n")}\n`)
-    })
-    process.exit(0);
+        testCases.forEach((eachCase: string[], testCaseIndex: number) => {
+            const dimensions: Dimensions = getBitmapDimensions(eachCase[0])
+            const pixelRows: string[] = eachCase.slice(1, dimensions.n+1)
+            const finalDistanceArray: number[][] = getFinalDistanceArray(dimensions, pixelRows)
+            console.log(`\nDistance Array for Test Case ${testCaseIndex+1}:\n${finalDistanceArray.map(row => row.join(" ")).join("\n")}\n`)
+        })
+        process.exit(0);
+    }
+
+    else{
+        throw new Error(`Please check number of bitmaps/test cases. Ensure 1 <= number of bitmaps/test cases <= 1000.`)
+    }
 
 });
 
