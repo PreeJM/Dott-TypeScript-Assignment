@@ -87,9 +87,6 @@ The number of test cases t must be in the range of (1≤t≤1000).
 
 The row size n and column size m must be in the ranges of (1 <= n <= 182) and (1 <= m <=182).
 
-(1≤t≤1000)
-1<=n <=182, 1<=m<=182
-
 
 ## Output
 
